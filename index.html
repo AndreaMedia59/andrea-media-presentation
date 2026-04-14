@@ -566,50 +566,65 @@ p { line-height: 1.7; font-size: clamp(0.88rem, 1.1vw, 1.05rem); }
   /* Luminous lines: subtler */
   .lumi-line, .lumi-line-v { opacity: 0.5; }
 
-  /* SLIDE 1 COVER: logo en haut, texte en dessous, centré */
+  /* SLIDE 1 COVER: logo en haut, texte centré en dessous */
+  #slide-0 {
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    padding-top: 3rem !important;
+  }
   #slide-0 .cover-visual {
-    order: -1 !important;
+    position: relative !important;
     width: 35% !important;
-    margin: 0 auto 1.5rem !important;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+    margin: 0 auto 1rem !important;
   }
   #slide-0 .slide-inner {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
     text-align: center !important;
   }
   #slide-0 .cover-content {
     text-align: center !important;
-    align-items: center !important;
+    max-width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
+    align-items: center !important;
   }
 
   /* SLIDE 8 DASHBOARD: image en haut avec fondu vers le bas */
+  #slide-8 {
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
   #slide-8 > div[style*="position:absolute"][style*="right:"] {
     position: relative !important;
     width: 100% !important;
-    height: 200px !important;
+    height: 220px !important;
     right: auto !important;
     top: auto !important;
-    margin-bottom: 1rem;
   }
   #slide-8 > div[style*="position:absolute"][style*="right:"] img {
     -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%) !important;
     mask-image: linear-gradient(to bottom, black 40%, transparent 100%) !important;
+    object-position: center center !important;
   }
   #slide-8 .slide-inner {
     text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
     align-items: center !important;
   }
 
   /* SLIDE 9 CONTACT: tout centrer */
+  #slide-9 {
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
   #slide-9 .slide-inner {
     text-align: center !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;
   }
 }
 
