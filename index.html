@@ -10,13 +10,17 @@
 <style>
 /* ===== RESET & BASE ===== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-snap-type: y mandatory; overflow-x: hidden; }
+html { overflow: hidden; height: 100%; }
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   color: #e0e8f0;
   background: #050A15;
   overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 /* ===== TYPOGRAPHY ===== */
@@ -496,7 +500,7 @@ p { line-height: 1.7; font-size: clamp(0.88rem, 1.1vw, 1.05rem); }
     min-height: 100vh;
     scroll-snap-align: start;
   }
-  html { scroll-snap-type: y proximity; }
+  body { scroll-snap-type: y proximity; }
 
   /* Cover: stack vertically */
   .cover-content { max-width: 100% !important; }
